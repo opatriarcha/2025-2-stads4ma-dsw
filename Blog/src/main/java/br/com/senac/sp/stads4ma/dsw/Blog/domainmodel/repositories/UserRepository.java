@@ -2,6 +2,7 @@ package br.com.senac.sp.stads4ma.dsw.Blog.domainmodel.repositories;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 import com.github.javafaker.Faker;
@@ -29,4 +30,30 @@ public class UserRepository {
     public List<User> findAll() {
         return this.internalDataset.stream().toList();
     }
+
+    public User findById(UUID id) {
+       if( this.internalDataset.contains(this.forgeUser(id))){
+           return this.internalDataset.get(
+                   this.internalDataset.indexOf(
+                           this.forgeUser(id)
+                   )
+           );
+       }
+       return null;
+    }
+
+    public boolean removeById(UUID id) {
+        User user = this.findById(id);
+        if(user != null)
+            return this.internalDataset.remove(user);
+        return false;
+    }
+
+    private static User forgeUser(UUID id) {
+        return new User(id);
+    }
+
+
+
+
 }
