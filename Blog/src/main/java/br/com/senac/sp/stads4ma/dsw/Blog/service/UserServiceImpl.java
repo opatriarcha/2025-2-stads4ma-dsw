@@ -35,4 +35,10 @@ public class UserServiceImpl implements UserService {
     public boolean deleteById(UUID id) {
         return this.userRepository.removeById(id);
     }
+
+    @Override
+    public User create(User user) {
+        user.setId(UUID.randomUUID());
+        return this.userRepository.create(user);
+    }
 }

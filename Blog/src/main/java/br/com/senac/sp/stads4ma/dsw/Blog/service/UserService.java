@@ -11,4 +11,6 @@ public interface UserService {
     User findById(UUID id);
 
     boolean deleteById(UUID id);
+
+    User create(User user);
 }
