@@ -1,6 +1,4 @@
-package br.com.fiap.tds._tdsq.Library.domainmodel.repositories;
-
-import br.com.fiap.tds._tdsq.Library.domainmodel.User;
+package br.com.senac.sp.stads4ma.dsw.Blog.domainmodel.repositories;
 
 import java.util.List;
 import java.util.Optional;

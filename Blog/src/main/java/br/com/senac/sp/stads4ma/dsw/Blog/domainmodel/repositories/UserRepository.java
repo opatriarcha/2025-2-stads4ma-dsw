@@ -1,7 +1,6 @@
-package br.com.fiap.tds._tdsq.Library.domainmodel.repositories;
+package br.com.senac.sp.stads4ma.dsw.Blog.domainmodel.repositories;
 
-import br.com.fiap.tds._tdsq.Library.domainmodel.Post;
-import br.com.fiap.tds._tdsq.Library.domainmodel.User;
+import br.com.senac.sp.stads4ma.dsw.Blog.domainmodel.Post;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.querydsl.QuerydslPredicateExecutor;
@@ -14,7 +13,7 @@ import java.util.UUID;
 public interface UserRepository extends
         JpaRepository<User, UUID>,
         QuerydslPredicateExecutor<User>,
-        UserRepositoryCustom<User, UUID>{
+        UserRepositoryCustom<User, UUID> {
 
     //Method Derived query
     List<User> findByEmail(String email);
@@ -47,4 +46,4 @@ public interface UserRepository extends
                                          @Param("namePart") String namePart);
 
 
- }
+}

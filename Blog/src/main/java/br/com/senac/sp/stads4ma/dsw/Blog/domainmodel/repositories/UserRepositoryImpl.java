@@ -1,6 +1,5 @@
-package br.com.fiap.tds._tdsq.Library.domainmodel.repositories;
+package br.com.senac.sp.stads4ma.dsw.Blog.domainmodel.repositories;
 
-import br.com.fiap.tds._tdsq.Library.domainmodel.*;
 import com.querydsl.jpa.impl.JPAQuery;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import jakarta.persistence.EntityManager;
@@ -8,7 +7,7 @@ import jakarta.persistence.PersistenceContext;
 import jakarta.persistence.TypedQuery;
 import jakarta.persistence.criteria.*;
 import lombok.Setter;
-import br.com.fiap.tds._tdsq.Library.domainmodel.QUser;
+
 
 import java.util.List;
 import java.util.Optional;
@@ -16,7 +15,7 @@ import java.util.UUID;
 
 import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
 
-public class UserRepositoryImpl implements UserRepositoryCustom<User, UUID> {
+public class UserRepositoryImpl implements br.com.fiap.tds._tdsq.Library.domainmodel.repositories.UserRepositoryCustom<User, UUID> {
 
     @PersistenceContext
     private @Setter EntityManager entityManager;
