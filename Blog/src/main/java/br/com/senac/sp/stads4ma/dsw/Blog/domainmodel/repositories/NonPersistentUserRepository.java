@@ -6,11 +6,11 @@ import com.github.javafaker.Faker;
 import org.springframework.stereotype.Component;
 
 @Component
-public class UserRepository {
+public class NonPersistentUserRepository {
 
     private Set<User> internalDataset = new HashSet<>();
 
-    public UserRepository(){
+    public NonPersistentUserRepository(){
         Faker faker = new Faker();
         for( int i = 0; i < 100; i++){
 

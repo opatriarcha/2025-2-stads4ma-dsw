@@ -1,6 +1,7 @@
 package br.com.senac.sp.stads4ma.dsw.Blog.domainmodel.repositories;
 
 
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.Objects;
@@ -9,10 +10,22 @@ import java.util.UUID;
 @NoArgsConstructor
 //@AllArgsConstructor
 @Builder
+@Entity
+@Table(name = "SYSTEM_USER")
 public class User {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
+    @Column(name = "ID")
     private @Setter @Getter UUID id;
+
+    @Column(name = "NAME", length = 255)
     private @Setter @Getter String name;
+
+    @Column(name = "EMAIL", length = 60, unique = true)
     private @Setter @Getter String email;
+
+    @Column(name = "PASSWORD", length = 20)
     private @Setter @Getter String password;
 
     @Override
@@ -46,6 +59,14 @@ public class User {
     }
 
     public User(UUID id) {
+        this.id = id;
+    }
+
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
         this.id = id;
     }
 }

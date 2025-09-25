@@ -1,7 +1,7 @@
 package br.com.senac.sp.stads4ma.dsw.Blog.service;
 
 import br.com.senac.sp.stads4ma.dsw.Blog.domainmodel.repositories.User;
-import br.com.senac.sp.stads4ma.dsw.Blog.domainmodel.repositories.UserRepository;
+import br.com.senac.sp.stads4ma.dsw.Blog.domainmodel.repositories.NonPersistentUserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +13,7 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
 
-    private final UserRepository userRepository;
+    private final NonPersistentUserRepository userRepository;
 
 //    public UserServiceImpl(UserRepository userRepository) {
 //        this.userRepository = userRepository;

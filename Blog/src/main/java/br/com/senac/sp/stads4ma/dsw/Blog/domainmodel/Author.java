@@ -1,4 +1,4 @@
-package br.com.fiap.tds._tdsq.Library.domainmodel;
+package br.com.senac.sp.stads4ma.dsw.Blog.domainmodel;
 
 import lombok.*;
 
