@@ -53,5 +53,17 @@ public class UserController {
         return ResponseEntity.notFound().build();
     }
 
+    @PutMapping
+    public ResponseEntity<User> updateUser(@RequestBody User user){
+        this.userService.update( user );
+        return new ResponseEntity<>(user, HttpStatus.CREATED);
+    }
+
+    @PatchMapping
+    public ResponseEntity<User> partialUpdateUser(@RequestBody User user){
+        this.userService.update( user );
+        return new ResponseEntity<>(user, HttpStatus.CREATED);
+    }
+
 
 }

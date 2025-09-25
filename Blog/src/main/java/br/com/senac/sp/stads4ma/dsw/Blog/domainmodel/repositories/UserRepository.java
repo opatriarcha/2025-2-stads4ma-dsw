@@ -56,4 +56,13 @@ public class UserRepository {
             return user;
         return null;
     }
+
+    public void update(User user) {
+        if( this.internalDataset.contains(user)){
+            this.internalDataset.remove(user);
+            this.internalDataset.add(user);
+        }else{
+            this.internalDataset.add(user);
+        }
+    }
 }

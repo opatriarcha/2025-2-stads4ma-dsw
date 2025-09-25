@@ -13,4 +13,6 @@ public interface UserService {
     boolean deleteById(UUID id);
 
     User create(User user);
+
+    void update(User user);
 }
