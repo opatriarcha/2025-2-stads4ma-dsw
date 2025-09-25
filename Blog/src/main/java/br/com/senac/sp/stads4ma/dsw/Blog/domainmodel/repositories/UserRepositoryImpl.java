@@ -13,9 +13,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
-import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
-
-public class UserRepositoryImpl implements br.com.fiap.tds._tdsq.Library.domainmodel.repositories.UserRepositoryCustom<User, UUID> {
+public class UserRepositoryImpl implements UserRepositoryCustom<User, UUID> {
 
     @PersistenceContext
     private @Setter EntityManager entityManager;
