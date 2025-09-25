@@ -33,16 +33,27 @@ public class User {
     @OneToOne(cascade = CascadeType.ALL,  fetch = FetchType.EAGER, mappedBy = "user")
     private @Setter @Getter Profile profile;
 
-    public User(UUID id, String name, String email, String password) {
-        this.id = id;
-        this.name = name;
-        this.email = email;
-        this.password = password;
+    public User(UUID id) {
+        this.id = UUID.randomUUID();
     }
 
-    public User(UUID id) {
-        this.id = id;
-    }
+//    public User(UUID id, String name, String email, String password) {
+//        this.id = id;
+//        this.name = name;
+//        this.email = email;
+//        this.password = password;
+//    }
+//
+//    public User(UUID id, String name, String email, String password, List<Post> posts, Profile profile ) {
+//        this.id = id;
+//        this.name = name;
+//        this.email = email;
+//        this.password = password;
+//    }
+//
+//    public User(UUID id) {
+//        this.id = id;
+//    }
 
     @Override
     public boolean equals(Object o) {

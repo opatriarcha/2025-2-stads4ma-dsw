@@ -1,5 +1,9 @@
 package br.com.senac.sp.stads4ma.dsw.Blog.domainmodel.repositories;
 
+import br.com.senac.sp.stads4ma.dsw.Blog.domainmodel.QPost;
+import br.com.senac.sp.stads4ma.dsw.Blog.domainmodel.QProfile;
+import br.com.senac.sp.stads4ma.dsw.Blog.domainmodel.QUser;
+import br.com.senac.sp.stads4ma.dsw.Blog.domainmodel.User;
 import com.querydsl.jpa.impl.JPAQuery;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import jakarta.persistence.EntityManager;

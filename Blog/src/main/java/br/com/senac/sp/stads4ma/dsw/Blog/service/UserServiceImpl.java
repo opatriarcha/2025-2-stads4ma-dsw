@@ -1,6 +1,6 @@
 package br.com.senac.sp.stads4ma.dsw.Blog.service;
 
-import br.com.senac.sp.stads4ma.dsw.Blog.domainmodel.repositories.User;
+import br.com.senac.sp.stads4ma.dsw.Blog.domainmodel.User;
 import br.com.senac.sp.stads4ma.dsw.Blog.domainmodel.repositories.NonPersistentUserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

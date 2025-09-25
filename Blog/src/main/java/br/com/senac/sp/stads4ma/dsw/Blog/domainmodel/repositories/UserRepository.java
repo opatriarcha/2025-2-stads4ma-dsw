@@ -1,6 +1,7 @@
 package br.com.senac.sp.stads4ma.dsw.Blog.domainmodel.repositories;
 
 import br.com.senac.sp.stads4ma.dsw.Blog.domainmodel.Post;
+import br.com.senac.sp.stads4ma.dsw.Blog.domainmodel.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.querydsl.QuerydslPredicateExecutor;

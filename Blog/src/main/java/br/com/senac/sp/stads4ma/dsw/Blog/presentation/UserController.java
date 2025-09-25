@@ -1,7 +1,6 @@
 package br.com.senac.sp.stads4ma.dsw.Blog.presentation;
 
-
-import br.com.senac.sp.stads4ma.dsw.Blog.domainmodel.repositories.User;
+import br.com.senac.sp.stads4ma.dsw.Blog.domainmodel.User;
 import br.com.senac.sp.stads4ma.dsw.Blog.service.UserService;
 import br.com.senac.sp.stads4ma.dsw.Blog.service.UserServiceImpl;
 import lombok.RequiredArgsConstructor;

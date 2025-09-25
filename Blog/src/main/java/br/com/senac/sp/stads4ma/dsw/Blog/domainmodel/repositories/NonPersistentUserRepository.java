@@ -2,6 +2,7 @@ package br.com.senac.sp.stads4ma.dsw.Blog.domainmodel.repositories;
 
 import java.util.*;
 
+import br.com.senac.sp.stads4ma.dsw.Blog.domainmodel.User;
 import com.github.javafaker.Faker;
 import org.springframework.stereotype.Component;
 
@@ -17,7 +18,8 @@ public class NonPersistentUserRepository {
             User user = new User( UUID.randomUUID(),
                     faker.name().fullName(),
                     faker.internet().emailAddress(),
-                    faker.internet().password(8,16)
+                    faker.internet().password(8,16),
+                    null, null
             );
             this.internalDataset.add(user);
         }
